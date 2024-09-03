@@ -1,0 +1,131 @@
+
+/* Basic reset for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hobbies-list {
+    list-style-type: none;
+}
+
+.hobbies-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Allows wrapping for small screens */
+}
+
+.hobbies-list img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.hobbies-list span {
+    font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin: 5px 0;
+    }
+
+    .hobbies-list {
+        padding: 0 10px;
+    }
+
+    .hobbies-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .hobbies-list img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .hobbies-list span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu a {
+        font-size: 16px;
+    }
+
+    .hobbies-list img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hobbies-list span {
+        font-size: 14px;
+    }
+}

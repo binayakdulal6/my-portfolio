@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Main container */
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background: url(images/2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navbar styling */
+.navbar {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 180px;
+    cursor: pointer;
+    margin-top: -5%;
+}
+
+/* Adjust logo size for smaller screens */
+@media (max-width: 768px) {
+    .logo {
+        width: 150px;
+    }
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.4s ease;
+    margin: 10px;
+}
+
+.navbar ul li a:hover {
+    color: red;
+}
+
+/* Content styling */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between; /* Space out items */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.myphoto {
+    flex: 1;
+    max-width: 30%;
+    margin-right: 5px;
+    margin-top: -20px;
+    display: inline-block;
+}
+
+.myphoto img {
+    width: 100%;
+    height: auto;
+}
+
+/* Ensure responsive scaling of images */
+@media (max-width: 768px) {
+    .myphoto {
+        max-width: 80%;
+        margin-right: 0;
+    }
+}
+
+.right-side {
+    flex: 2;
+    max-width: 50%;
+}
+
+/* Adjust text and margins for smaller screens */
+.text {
+    background-color: pink;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: -220px;
+    margin-right: 150px;
+    margin-top: -10px;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .text {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 16px; /* Adjust font size for readability on smaller screens */
+    }
+}
+
+.menu-links {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-links h2 {
+    margin: 20px 0;
+}
+
+.menu-links li {
+    margin-bottom: 10px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu-links img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Adjust image size for smaller screens */
+@media (max-width: 480px) {
+    .menu-links img {
+        width: 80px;
+    }
+}
+
+.menu-links span {
+    font-size: 14px;
+}
+
+.menu-links li a:hover {
+    color: red;
+}
+
+.menu-links .with-image {
+    display: flex;
+    align-items: center;
+}
+
+/* Footer styling */
+.footer {
+    color: black;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: rgba(255, 255, 0, 0.382);
+    margin-top: 20px;
+}
+
+/* Adjust footer padding and font size for smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 10px;
+    }
+}
+
+.footer a:hover {
+    color: green;
+    transition: color 1s;
+}
+
+.footer a:active {
+    opacity: 0.7;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .myphoto, .right-side {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul li {
+        font-size: 14px;
+    }
+
+    .text {
+        font-size: 4vw; /* Responsive font size */
+    }
+}
